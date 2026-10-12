@@ -1,0 +1,23 @@
+{
+  "name": "hireflow-ai",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
+
+  "workspaces": [
+  "apps/*",
+  "packages/*"
+],
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c blue,green \"npm run dev --workspace=@hireflow/web\" \"npm run dev --workspace=@hireflow/api\"",
+    "dev:web": "npm run dev --workspace=@hireflow/web",
+    "dev:api": "npm run dev --workspace=@hireflow/api",
+    "build": "npm run build --workspace=@hireflow/shared && npm run build --workspace=@hireflow/api && npm run build --workspace=@hireflow/web",
+    "lint": "npm run lint --workspace=@hireflow/shared && npm run lint --workspace=@hireflow/api && npm run lint --workspace=@hireflow/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
