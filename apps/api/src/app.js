@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import { apiHealthSchema } from "@hireflow/shared";
 import { env } from "./config/env.js";
 import { isDatabaseReady } from "./config/database.js";
+
 import { errorHandler } from "./middleware/errorHandler.js";
 
 import cookieParser from "cookie-parser";
