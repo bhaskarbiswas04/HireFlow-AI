@@ -3,6 +3,7 @@
 import { verifyAccessToken } from "../modules/auth/auth.tokens.js";
 import User from "../models/User.js";
 
+
 export async function requireAuth(req, res, next) {
   const authorization = req.get("authorization");
 

@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "dev": "node --watch src/server.js",
-    "start": "node src/server.js",
-    "build": "node scripts/check-build.js",
-    "lint": "node scripts/check-build.js"
-  },
+ "scripts": {
+  "dev": "node --watch src/server.js",
+  "start": "node src/server.js",
+  "build": "node scripts/check-build.js",
+  "lint": "node scripts/check-build.js",
+  "test": "vitest run",
+  "test:watch": "vitest"
+},
   "dependencies": {
     "@hireflow/shared": "^0.1.0",
     "argon2": "^0.45.1",
