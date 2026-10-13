@@ -10,6 +10,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import cookieParser from "cookie-parser";
 import authRoutes from "./modules/auth/auth.routes.js";
 import companyRoutes from "./modules/companies/company.routes.js";
+import jobRoutes from "./modules/jobs/job.routes.js";
 
 export const app = express();
 app.disable("x-powered-by");
@@ -36,6 +37,7 @@ app.get("/api/health/ready", (_req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/companies", companyRoutes);
+app.use("/api", jobRoutes);
 
 app.use((_req, res) =>
   res.status(404).json({
