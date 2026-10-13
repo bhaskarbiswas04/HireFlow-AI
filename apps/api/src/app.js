@@ -45,42 +45,6 @@ app.use((_req, res) =>
     },
   }),
 );
-
-app.use((_req, res) =>
-  res.status(404).json({
-    error: {
-      code: "NOT_FOUND",
-      message: "The requested API route does not exist.",
-    },
-  }),
-);
-
-app.use((_req, res) =>
-  res.status(404).json({
-    error: {
-      code: "NOT_FOUND",
-      message: "The requested API route does not exist.",
-    },
-  }),
-);
-
-app.use((_req, res) =>
-  res.status(404).json({
-    error: {
-      code: "NOT_FOUND",
-      message: "The requested API route does not exist.",
-    },
-  }),
-);
-
-app.use((_req, res) =>
-  res.status(404).json({
-    error: {
-      code: "NOT_FOUND",
-      message: "The requested API route does not exist.",
-    },
-  }),
-);
 app.use(errorHandler);
 
 app.use((error, _req, res, _next) => {
